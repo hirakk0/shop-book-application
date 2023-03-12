@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace BookManagementSystem
 {
-    public partial class Form2 : Form
+    public partial class registrationForm : Form
     {
         private readonly string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
 
-        public Form2()
+        public registrationForm()
         {
             InitializeComponent();
         }
@@ -69,7 +69,7 @@ namespace BookManagementSystem
                         }
 
                         this.Hide();
-                        Form4 form4 = new Form4(userID);
+                        userForm form4 = new userForm(userID);
                         form4.Show();
                     }
                 }

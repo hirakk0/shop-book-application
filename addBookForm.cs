@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace BookManagementSystem
 {
-    public partial class Form5 : Form
+    public partial class addBookForm : Form
     {
         private readonly string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
-        public Form5()
+        public addBookForm()
         {
             InitializeComponent();
         }

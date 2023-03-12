@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem
 {
-    partial class Form12
+    partial class addAuthorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form12));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addAuthorForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.shopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

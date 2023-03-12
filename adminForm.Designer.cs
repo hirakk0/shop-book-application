@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem
 {
-    partial class Form4
+    partial class adminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,61 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.shopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewShopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBookReviewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shopUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administratorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBookOrderInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewInformationBookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewBookAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(942, 344);
-            this.dataGridView1.TabIndex = 3;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.shopBooksToolStripMenuItem,
             this.shopUserToolStripMenuItem,
+            this.administratorsToolStripMenuItem,
             this.bookOrdersToolStripMenuItem,
             this.bookAuthorsToolStripMenuItem,
             this.systemExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(942, 24);
-            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Size = new System.Drawing.Size(828, 24);
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // shopBooksToolStripMenuItem
             // 
             this.shopBooksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewShopBooksToolStripMenuItem,
+            this.addNewBookToolStripMenuItem,
             this.viewBookReviewsToolStripMenuItem});
             this.shopBooksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("shopBooksToolStripMenuItem.Image")));
             this.shopBooksToolStripMenuItem.Name = "shopBooksToolStripMenuItem";
             this.shopBooksToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.shopBooksToolStripMenuItem.Text = "Shop Books";
             // 
-            // viewShopBooksToolStripMenuItem
+            // addNewBookToolStripMenuItem
             // 
-            this.viewShopBooksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewShopBooksToolStripMenuItem.Image")));
-            this.viewShopBooksToolStripMenuItem.Name = "viewShopBooksToolStripMenuItem";
-            this.viewShopBooksToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.viewShopBooksToolStripMenuItem.Text = "View Shop Books";
+            this.addNewBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewBookToolStripMenuItem.Image")));
+            this.addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
+            this.addNewBookToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.addNewBookToolStripMenuItem.Text = "Add New Book";
+            this.addNewBookToolStripMenuItem.Click += new System.EventHandler(this.addNewBookToolStripMenuItem_Click);
             // 
             // viewBookReviewsToolStripMenuItem
             // 
@@ -107,6 +103,24 @@
             this.viewUserInformationToolStripMenuItem.Name = "viewUserInformationToolStripMenuItem";
             this.viewUserInformationToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.viewUserInformationToolStripMenuItem.Text = "View User Information";
+            this.viewUserInformationToolStripMenuItem.Click += new System.EventHandler(this.viewUserInformationToolStripMenuItem_Click);
+            // 
+            // administratorsToolStripMenuItem
+            // 
+            this.administratorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewAdministratorToolStripMenuItem});
+            this.administratorsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("administratorsToolStripMenuItem.Image")));
+            this.administratorsToolStripMenuItem.Name = "administratorsToolStripMenuItem";
+            this.administratorsToolStripMenuItem.Size = new System.Drawing.Size(146, 20);
+            this.administratorsToolStripMenuItem.Text = "Shop Administrators ";
+            // 
+            // addNewAdministratorToolStripMenuItem
+            // 
+            this.addNewAdministratorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewAdministratorToolStripMenuItem.Image")));
+            this.addNewAdministratorToolStripMenuItem.Name = "addNewAdministratorToolStripMenuItem";
+            this.addNewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.addNewAdministratorToolStripMenuItem.Text = "Add New Administrator";
+            this.addNewAdministratorToolStripMenuItem.Click += new System.EventHandler(this.addNewAdministratorToolStripMenuItem_Click);
             // 
             // bookOrdersToolStripMenuItem
             // 
@@ -123,22 +137,24 @@
             this.viewBookOrderInformationToolStripMenuItem.Name = "viewBookOrderInformationToolStripMenuItem";
             this.viewBookOrderInformationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.viewBookOrderInformationToolStripMenuItem.Text = "View Book Order Information";
+            this.viewBookOrderInformationToolStripMenuItem.Click += new System.EventHandler(this.viewBookOrderInformationToolStripMenuItem_Click);
             // 
             // bookAuthorsToolStripMenuItem
             // 
             this.bookAuthorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewInformationBookAuthorsToolStripMenuItem});
+            this.addNewBookAuthorToolStripMenuItem});
             this.bookAuthorsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bookAuthorsToolStripMenuItem.Image")));
             this.bookAuthorsToolStripMenuItem.Name = "bookAuthorsToolStripMenuItem";
             this.bookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.bookAuthorsToolStripMenuItem.Text = "Book Authors";
             // 
-            // viewInformationBookAuthorsToolStripMenuItem
+            // addNewBookAuthorToolStripMenuItem
             // 
-            this.viewInformationBookAuthorsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewInformationBookAuthorsToolStripMenuItem.Image")));
-            this.viewInformationBookAuthorsToolStripMenuItem.Name = "viewInformationBookAuthorsToolStripMenuItem";
-            this.viewInformationBookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.viewInformationBookAuthorsToolStripMenuItem.Text = "View Information Book Authors";
+            this.addNewBookAuthorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewBookAuthorToolStripMenuItem.Image")));
+            this.addNewBookAuthorToolStripMenuItem.Name = "addNewBookAuthorToolStripMenuItem";
+            this.addNewBookAuthorToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.addNewBookAuthorToolStripMenuItem.Text = "Add New Book Author";
+            this.addNewBookAuthorToolStripMenuItem.Click += new System.EventHandler(this.addNewBookAuthorToolStripMenuItem_Click);
             // 
             // systemExitToolStripMenuItem
             // 
@@ -146,20 +162,32 @@
             this.systemExitToolStripMenuItem.Name = "systemExitToolStripMenuItem";
             this.systemExitToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.systemExitToolStripMenuItem.Text = "System Exit";
+            this.systemExitToolStripMenuItem.Click += new System.EventHandler(this.systemExitToolStripMenuItem_Click);
             // 
-            // Form4
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(828, 342);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 369);
+            this.ClientSize = new System.Drawing.Size(828, 369);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "Form4";
-            this.Text = "Form4";
-            this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "adminForm";
+            this.Text = "Form3";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,17 +195,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem shopBooksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewShopBooksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administratorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewAdministratorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookAuthorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewBookAuthorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewBookOrderInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewBookReviewsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shopUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUserInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewBookOrderInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookAuthorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewInformationBookAuthorsToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem systemExitToolStripMenuItem;
     }
 }

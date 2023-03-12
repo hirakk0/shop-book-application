@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace BookManagementSystem
 {
-    public partial class Form3 : Form
+    public partial class adminForm : Form
     {
-        public Form3()
+        public adminForm()
         {
             InitializeComponent();
         }
@@ -21,37 +21,36 @@ namespace BookManagementSystem
 
         private void addNewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            addBookForm form5 = new addBookForm();
             form5.ShowDialog();
         }
 
         private void viewBookReviewsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            reviewBookForm form6 = new reviewBookForm();
             form6.ShowDialog();
         }
 
         private void viewUserInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form13 form13 = new Form13();
+            addUserForm form13 = new addUserForm();
             form13.ShowDialog();
         }
 
         private void addNewAdministratorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8();
+            addAdminForm form8 = new addAdminForm();
             form8.ShowDialog();
-        }
-        private void viewBookOrderInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form11 form11 = new Form11();
-            form11.ShowDialog();
         }
 
         private void addNewBookAuthorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12();
+            addAuthorForm form12 = new addAuthorForm();
             form12.ShowDialog();
+        }
+
+        private void viewBookOrderInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

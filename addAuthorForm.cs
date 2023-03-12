@@ -3,15 +3,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BookManagementSystem
 {
-    public partial class Form10 : Form
+    public partial class addAuthorForm : Form
     {
         private readonly string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
+        public addAuthorForm()
+        {
+            InitializeComponent();
+        }
 
-        private void Form10_Load(object sender, EventArgs e)
+        private void Form12_Load(object sender, EventArgs e)
         {
             string selectQuery = "SELECT * FROM authorsBook";
 
@@ -24,6 +27,7 @@ namespace BookManagementSystem
                 dataGridView1.DataSource = dataTable;
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
@@ -31,6 +35,7 @@ namespace BookManagementSystem
                 MessageBox.Show("Please enter all required fields.");
                 return;
             }
+
             const string query = "INSERT INTO authorsBook (authorFirstName, authorLastName, authorBirthDate, authorCountry) VALUES (@firstName, @lastName, @birthDate, @country)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))

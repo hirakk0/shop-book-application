@@ -2,14 +2,15 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BookManagementSystem
 {
-    public partial class Form4 : Form
+    public partial class userForm : Form
     {
         private int userID;
 
-        public Form4(int userID)
+        public userForm(int userID)
         {
             InitializeComponent();
             this.userID = userID;
@@ -49,10 +50,10 @@ namespace BookManagementSystem
             }
         }
 
-        private void viewBookReviewsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewShopBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
-            form7.ShowDialog();
+            shopBookForm form14 = new shopBookForm();
+            form14.ShowDialog();
         }
     }
 }

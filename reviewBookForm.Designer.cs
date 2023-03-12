@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem
 {
-    partial class Form7
+    partial class reviewBookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reviewBookForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.shopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +40,9 @@
             this.administratorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAdministratorInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopPaymentSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewPaymentMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewShopPaymentMethodsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBookOrderInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +67,7 @@
             this.shopBooksToolStripMenuItem,
             this.shopUserToolStripMenuItem,
             this.administratorsToolStripMenuItem,
+            this.shopPaymentSystemToolStripMenuItem,
             this.bookOrdersToolStripMenuItem,
             this.bookAuthorsToolStripMenuItem,
             this.systemExitToolStripMenuItem});
@@ -145,6 +149,27 @@
             this.viewAdministratorInformationToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this.viewAdministratorInformationToolStripMenuItem.Text = "View Administrator Information";
             // 
+            // shopPaymentSystemToolStripMenuItem
+            // 
+            this.shopPaymentSystemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewPaymentMethodToolStripMenuItem,
+            this.viewShopPaymentMethodsToolStripMenuItem});
+            this.shopPaymentSystemToolStripMenuItem.Name = "shopPaymentSystemToolStripMenuItem";
+            this.shopPaymentSystemToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.shopPaymentSystemToolStripMenuItem.Text = "Shop Payment System";
+            // 
+            // addNewPaymentMethodToolStripMenuItem
+            // 
+            this.addNewPaymentMethodToolStripMenuItem.Name = "addNewPaymentMethodToolStripMenuItem";
+            this.addNewPaymentMethodToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.addNewPaymentMethodToolStripMenuItem.Text = "Add New Payment Method";
+            // 
+            // viewShopPaymentMethodsToolStripMenuItem
+            // 
+            this.viewShopPaymentMethodsToolStripMenuItem.Name = "viewShopPaymentMethodsToolStripMenuItem";
+            this.viewShopPaymentMethodsToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.viewShopPaymentMethodsToolStripMenuItem.Text = "View Shop Payment Methods";
+            // 
             // bookOrdersToolStripMenuItem
             // 
             this.bookOrdersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -192,16 +217,17 @@
             this.systemExitToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.systemExitToolStripMenuItem.Text = "System Exit";
             // 
-            // Form7
+            // reviewBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 369);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form7";
-            this.Text = "Form8";
-            this.Load += new System.EventHandler(this.Form8_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "reviewBookForm";
+            this.Text = "Form7";
+            this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -223,6 +249,9 @@
         private System.Windows.Forms.ToolStripMenuItem administratorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewAdministratorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewAdministratorInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shopPaymentSystemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewPaymentMethodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewShopPaymentMethodsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewBookOrderInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookAuthorsToolStripMenuItem;

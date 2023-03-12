@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem
 {
-    partial class Form11
+    partial class userForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userForm));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.shopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewShopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBookReviewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shopUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shopPaymentSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewShopPaymentMethodsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBookOrderInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationBookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(942, 344);
+            this.dataGridView1.TabIndex = 3;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.shopBooksToolStripMenuItem,
             this.shopUserToolStripMenuItem,
-            this.shopPaymentSystemToolStripMenuItem,
             this.bookOrdersToolStripMenuItem,
             this.bookAuthorsToolStripMenuItem,
             this.systemExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(942, 24);
-            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // shopBooksToolStripMenuItem
@@ -78,6 +83,7 @@
             this.viewShopBooksToolStripMenuItem.Name = "viewShopBooksToolStripMenuItem";
             this.viewShopBooksToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.viewShopBooksToolStripMenuItem.Text = "View Shop Books";
+            this.viewShopBooksToolStripMenuItem.Click += new System.EventHandler(this.viewShopBooksToolStripMenuItem_Click);
             // 
             // viewBookReviewsToolStripMenuItem
             // 
@@ -101,22 +107,6 @@
             this.viewUserInformationToolStripMenuItem.Name = "viewUserInformationToolStripMenuItem";
             this.viewUserInformationToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.viewUserInformationToolStripMenuItem.Text = "View User Information";
-            // 
-            // shopPaymentSystemToolStripMenuItem
-            // 
-            this.shopPaymentSystemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewShopPaymentMethodsToolStripMenuItem});
-            this.shopPaymentSystemToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("shopPaymentSystemToolStripMenuItem.Image")));
-            this.shopPaymentSystemToolStripMenuItem.Name = "shopPaymentSystemToolStripMenuItem";
-            this.shopPaymentSystemToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
-            this.shopPaymentSystemToolStripMenuItem.Text = "Shop Payment System";
-            // 
-            // viewShopPaymentMethodsToolStripMenuItem
-            // 
-            this.viewShopPaymentMethodsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewShopPaymentMethodsToolStripMenuItem.Image")));
-            this.viewShopPaymentMethodsToolStripMenuItem.Name = "viewShopPaymentMethodsToolStripMenuItem";
-            this.viewShopPaymentMethodsToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.viewShopPaymentMethodsToolStripMenuItem.Text = "View Shop Payment Methods";
             // 
             // bookOrdersToolStripMenuItem
             // 
@@ -157,27 +147,20 @@
             this.systemExitToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.systemExitToolStripMenuItem.Text = "System Exit";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(942, 344);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // Form10
+            // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 369);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form10";
-            this.Text = "Form10";
-            this.Load += new System.EventHandler(this.Form10_Load);
+            this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "userForm";
+            this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,19 +168,17 @@
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem shopBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewShopBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewBookReviewsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shopUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUserInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shopPaymentSystemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewShopPaymentMethodsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewBookOrderInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookAuthorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInformationBookAuthorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem systemExitToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

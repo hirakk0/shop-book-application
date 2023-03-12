@@ -7,9 +7,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BookManagementSystem
 {
-    public partial class Form8 : Form
+    public partial class addAdminForm : Form
     {
-        public Form8()
+        public addAdminForm()
         {
             InitializeComponent();
         }

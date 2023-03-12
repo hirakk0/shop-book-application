@@ -13,10 +13,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BookManagementSystem
 {
-    public partial class Form13 : Form
+    public partial class addUserForm : Form
     {
         private readonly string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
-        public Form13()
+        public addUserForm()
         {
             InitializeComponent();
         }
