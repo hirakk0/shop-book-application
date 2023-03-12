@@ -9,18 +9,17 @@ namespace BookManagementSystem
     public partial class addAuthorForm : Form
     {
         private readonly string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
+
         public addAuthorForm()
         {
             InitializeComponent();
+            LoadData();
         }
 
-        private void Form12_Load(object sender, EventArgs e)
+        private void LoadData()
         {
-            string selectQuery = "SELECT * FROM authorsBook";
-
             using (SqlConnection connection = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(selectQuery, connection))
-            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM authorsBook", connection))
             {
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -51,11 +50,12 @@ namespace BookManagementSystem
                 int result = command.ExecuteNonQuery();
                 if (result > 0)
                 {
-                    MessageBox.Show("Book added successfully!");
+                    MessageBox.Show("Author added successfully!");
+                    LoadData();
                 }
                 else
                 {
-                    MessageBox.Show("Error while adding book.");
+                    MessageBox.Show("Error while adding author.");
                 }
             }
         }
@@ -77,7 +77,7 @@ namespace BookManagementSystem
                 }
             }
 
-            MessageBox.Show("Совпадения не найдены.");
+            MessageBox.Show("No matches found.");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -86,13 +86,13 @@ namespace BookManagementSystem
 
             if (string.IsNullOrEmpty(columnName))
             {
-                MessageBox.Show("Введите имя столбца для сортировки.");
+                MessageBox.Show("Please enter a column name to sort by.");
                 return;
             }
 
             if (dataGridView1.Columns[columnName] == null)
             {
-                MessageBox.Show($"Столбец {columnName} не найден.");
+                MessageBox.Show($"Column {columnName} not found.");
                 return;
             }
 

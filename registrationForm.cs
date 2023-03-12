@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -47,32 +46,26 @@ namespace BookManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-                using (SqlCommand cmd = conn.CreateCommand())
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO usersBook (userEmail, userPassword, userZipCode) VALUES (@Email, @Password, @ZipCode); SELECT SCOPE_IDENTITY();", conn))
                 {
-                    cmd.CommandText = "INSERT INTO usersBook (userEmail, userPassword, userZipCode) VALUES (@Email, @Password, @ZipCode)";
+                    conn.Open();
                     cmd.Parameters.AddWithValue("@Email", string.IsNullOrEmpty(textBox1.Text) ? DBNull.Value : (object)textBox1.Text);
                     cmd.Parameters.AddWithValue("@Password", string.IsNullOrEmpty(textBox2.Text) ? DBNull.Value : (object)textBox2.Text);
                     cmd.Parameters.AddWithValue("@ZipCode", string.IsNullOrEmpty(textBox3.Text) ? DBNull.Value : (object)textBox3.Text);
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        int userID = 0;
-                        cmd.CommandText = "SELECT SCOPE_IDENTITY()";
-                        object result = cmd.ExecuteScalar();
-                        if (result != null && result != DBNull.Value)
-                        {
-                            userID = Convert.ToInt32(result);
-                        }
+                    int userID = Convert.ToInt32(cmd.ExecuteScalar());
 
-                        this.Hide();
-                        userForm form4 = new userForm(userID);
-                        form4.Show();
-                    }
+                    this.Hide();
+                    userForm form4 = new userForm(userID);
+                    form4.Show();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred during registration: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

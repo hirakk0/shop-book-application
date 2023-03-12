@@ -7,6 +7,8 @@ namespace BookManagementSystem
 {
     public partial class reviewBookForm : Form
     {
+        private const string ConnectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
+
         public reviewBookForm()
         {
             InitializeComponent();
@@ -14,10 +16,9 @@ namespace BookManagementSystem
 
         private void Form7_Load(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
             string selectQuery = "SELECT * FROM reviewsBook";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
             using (SqlCommand cmd = new SqlCommand(selectQuery, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
             {

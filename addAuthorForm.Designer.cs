@@ -511,7 +511,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form12";
             this.Text = "Form12";
-            this.Load += new System.EventHandler(this.Form12_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

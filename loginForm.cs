@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -7,10 +6,13 @@ namespace BookManagementSystem
 {
     public partial class loginForm : Form
     {
+        private const string connectionString = "Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True";
+
         public loginForm()
         {
             InitializeComponent();
         }
+
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to close the form?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -39,13 +41,13 @@ namespace BookManagementSystem
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand("select * from adminsBook where adminEmail = @email and adminPassword = @password", conn))
             {
-                conn.Open();
-
                 cmd.Parameters.AddWithValue("@email", textBox1.Text);
                 cmd.Parameters.AddWithValue("@password", textBox2.Text);
+
+                conn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -59,13 +61,13 @@ namespace BookManagementSystem
                 }
             }
 
-            using (SqlConnection conn = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Database=bookShop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand("select userID from usersBook where userEmail = @email and userPassword = @password", conn))
             {
-                conn.Open();
-
                 cmd.Parameters.AddWithValue("@email", textBox1.Text);
                 cmd.Parameters.AddWithValue("@password", textBox2.Text);
+
+                conn.Open();
 
                 object userID = cmd.ExecuteScalar();
 
@@ -77,6 +79,7 @@ namespace BookManagementSystem
                     return;
                 }
             }
+
             // Если ни один из запросов не вернул результатов, значит, email или пароль были введены неверно
             MessageBox.Show("Email or password is incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -84,8 +87,8 @@ namespace BookManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            registrationForm form2 = new registrationForm();
-            form2.Show();
+            registrationForm registrationForm = new registrationForm();
+            registrationForm.Show();
         }
     }
 
