@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem
 {
-    partial class shopBookForm
+    partial class makeReviewBookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(shopBookForm));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(makeReviewBookForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.shopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewShopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,17 +38,10 @@
             this.bookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationBookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(942, 344);
-            this.dataGridView1.TabIndex = 6;
             // 
             // menuStrip1
             // 
@@ -60,8 +52,8 @@
             this.systemExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(942, 26);
-            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Size = new System.Drawing.Size(1005, 26);
+            this.menuStrip1.TabIndex = 63;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // shopBooksToolStripMenuItem
@@ -135,27 +127,33 @@
             this.systemExitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.systemExitToolStripMenuItem.Text = "SIGN OUT";
             // 
-            // shopBookForm
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(260, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(745, 328);
+            this.dataGridView1.TabIndex = 64;
+            // 
+            // makeReviewBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 369);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1005, 358);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "shopBookForm";
-            this.Text = "Welcome to System - User Mode [BookManagmentSystemApplication] - Shop Books Catal" +
-    "og";
-            this.Load += new System.EventHandler(this.Form14_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.Add(this.menuStrip1);
+            this.Name = "makeReviewBookForm";
+            this.Text = "makerBookForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem shopBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewShopBooksToolStripMenuItem;
@@ -165,5 +163,6 @@
         private System.Windows.Forms.ToolStripMenuItem bookAuthorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInformationBookAuthorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem systemExitToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
