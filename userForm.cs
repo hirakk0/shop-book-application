@@ -23,10 +23,10 @@ namespace BookManagementSystem
             {
                 connection.Open();
 
-                string query = "SELECT * FROM ordersBook WHERE UserID=@userID";
+                string query = "SELECT * FROM ordersMakeBook WHERE userID=@userId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.Add("@userID", SqlDbType.Int).Value = userID;
+                    command.Parameters.Add("@userId", SqlDbType.Int).Value = userID;
 
                     DataTable dataTable = new DataTable();
 
@@ -44,6 +44,12 @@ namespace BookManagementSystem
         {
             shopBookForm form14 = new shopBookForm();
             form14.Show();
+        }
+
+        private void viewBookOrderInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            makeOrderBookForm makeOrderBookForm = new makeOrderBookForm(userID);
+            makeOrderBookForm.ShowDialog();
         }
     }
 }

@@ -69,6 +69,12 @@
     <Compile Include="addUserForm.Designer.cs">
       <DependentUpon>addUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="makeOrderBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="makeOrderBookForm.Designer.cs">
+      <DependentUpon>makeOrderBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="shopBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addUserForm.resx">
       <DependentUpon>addUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="makeOrderBookForm.resx">
+      <DependentUpon>makeOrderBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="shopBookForm.resx">
       <DependentUpon>shopBookForm.cs</DependentUpon>
