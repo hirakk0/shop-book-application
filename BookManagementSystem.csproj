@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorBooksForm.Designer.cs">
+      <DependentUpon>AuthorBooksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="bookShopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +74,12 @@
     </Compile>
     <Compile Include="addUserForm.Designer.cs">
       <DependentUpon>addUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="makeReviewsBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="makeReviewsBookForm.Designer.cs">
+      <DependentUpon>makeReviewsBookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="makeOrderBookForm.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuthorBooksForm.resx">
+      <DependentUpon>AuthorBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="makeOrderBookForm.resx">
       <DependentUpon>makeOrderBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="makeReviewsBookForm.resx">
+      <DependentUpon>makeReviewsBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="shopBookForm.resx">
       <DependentUpon>shopBookForm.cs</DependentUpon>

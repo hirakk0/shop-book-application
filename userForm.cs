@@ -23,7 +23,7 @@ namespace BookManagementSystem
             {
                 connection.Open();
 
-                string query = "SELECT userEmail, userFirstName, userSecondName, userBookID, PaymentMethod, DeliveryLocation, userId FROM ordersMakeBook WHERE userID=@userId";
+                string query = "SELECT userEmail, userFirstName, userSecondName, bookID, paymentMethod, DeliveryLocation, userId FROM ordersBook WHERE userID=@userId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.Add("@userId", SqlDbType.Int).Value = userID;
@@ -50,6 +50,18 @@ namespace BookManagementSystem
         {
             makeOrderBookForm makeOrderBookForm = new makeOrderBookForm(userID);
             makeOrderBookForm.ShowDialog();
+        }
+
+        private void viewBookReviewsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            makeReviewsBookForm makeReviewsBookForm = new makeReviewsBookForm(userID);
+            makeReviewsBookForm.ShowDialog();
+        }
+
+        private void viewInformationBookAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorBooksForm authorBooksForm = new AuthorBooksForm();
+            authorBooksForm.ShowDialog();
         }
     }
 }

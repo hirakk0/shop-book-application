@@ -91,6 +91,7 @@
             this.viewBookReviewsToolStripMenuItem.Name = "viewBookReviewsToolStripMenuItem";
             this.viewBookReviewsToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.viewBookReviewsToolStripMenuItem.Text = "View Reviews Store Books";
+            this.viewBookReviewsToolStripMenuItem.Click += new System.EventHandler(this.viewBookReviewsToolStripMenuItem_Click);
             // 
             // bookOrdersToolStripMenuItem
             // 
@@ -128,6 +129,7 @@
             this.viewInformationBookAuthorsToolStripMenuItem.Name = "viewInformationBookAuthorsToolStripMenuItem";
             this.viewInformationBookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.viewInformationBookAuthorsToolStripMenuItem.Text = "View Information About Book Writers";
+            this.viewInformationBookAuthorsToolStripMenuItem.Click += new System.EventHandler(this.viewInformationBookAuthorsToolStripMenuItem_Click);
             // 
             // systemExitToolStripMenuItem
             // 

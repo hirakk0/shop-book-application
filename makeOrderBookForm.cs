@@ -33,16 +33,16 @@ namespace BookManagementSystem
             }
         }
 
-        private void InsertData(int userId, string userEmail, string userFirstName, string userSecondName, int userBookID, string PaymentMethod, string DeliveryLocation)
+        private void InsertData(int userId, string userEmail, string userFirstName, string userSecondName, int bookID, string PaymentMethod, string DeliveryLocation)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand("INSERT INTO ordersMakeBook (userId, userEmail, userFirstName, userSecondName, userBookID, paymentMethod, DeliveryLocation) VALUES (@userId, @userEmail, @userFirstName, @userSecondName, @userBookID, @paymentMethod, @DeliveryLocation)", connection))
+            using (SqlCommand command = new SqlCommand("INSERT INTO ordersBook (userId, userEmail, userFirstName, userSecondName, bookID, paymentMethod, DeliveryLocation) VALUES (@userId, @userEmail, @userFirstName, @userSecondName, @bookID, @paymentMethod, @DeliveryLocation)", connection))
             {
                 command.Parameters.AddWithValue("@userId", userId);
                 command.Parameters.AddWithValue("@userEmail", userEmail);
                 command.Parameters.AddWithValue("@userFirstName", userFirstName);
                 command.Parameters.AddWithValue("@userSecondName", userSecondName);
-                command.Parameters.AddWithValue("@userBookID", userBookID);
+                command.Parameters.AddWithValue("@bookID", bookID);
                 command.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
                 command.Parameters.AddWithValue("@DeliveryLocation", DeliveryLocation);
                 connection.Open();
@@ -55,10 +55,10 @@ namespace BookManagementSystem
             string userEmail = textBox1.Text;
             string userFirstName = textBox2.Text;
             string userSecondName = textBox3.Text;
-            int userBookID = Convert.ToInt32(textBox4.Text);
+            int bookID = Convert.ToInt32(textBox4.Text);
             string paymentMethod = comboBox1.SelectedItem.ToString();
             string mailServiceLocation = comboBox2.SelectedItem.ToString();
-            InsertData(userId, userEmail, userFirstName, userSecondName, userBookID, paymentMethod, mailServiceLocation);
+            InsertData(userId, userEmail, userFirstName, userSecondName, bookID, paymentMethod, mailServiceLocation);
             LoadData();
         }
     }
