@@ -225,6 +225,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "reviewBookForm";
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.Form7_Load);

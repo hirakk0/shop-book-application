@@ -61,5 +61,22 @@ namespace BookManagementSystem
             InsertData(userId, userEmail, userFirstName, userSecondName, bookID, paymentMethod, mailServiceLocation);
             LoadData();
         }
+
+        private void viewShopBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            shopBookForm form14 = new shopBookForm();
+            form14.Show();
+        }
+
+        private void viewInformationBookAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorBooksForm authorBooksForm = new AuthorBooksForm();
+            authorBooksForm.ShowDialog();
+        }
+
+        private void systemExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

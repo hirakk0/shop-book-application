@@ -138,6 +138,7 @@
             this.systemExitToolStripMenuItem.Name = "systemExitToolStripMenuItem";
             this.systemExitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.systemExitToolStripMenuItem.Text = "SIGN OUT";
+            this.systemExitToolStripMenuItem.Click += new System.EventHandler(this.systemExitToolStripMenuItem_Click);
             // 
             // userForm
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userForm";
             this.Text = "Welcome to System - User Mode [BookManagmentSystemApplication] - Book Order Histo" +
     "ry";

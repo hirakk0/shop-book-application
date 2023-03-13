@@ -63,5 +63,10 @@ namespace BookManagementSystem
             AuthorBooksForm authorBooksForm = new AuthorBooksForm();
             authorBooksForm.ShowDialog();
         }
+
+        private void systemExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

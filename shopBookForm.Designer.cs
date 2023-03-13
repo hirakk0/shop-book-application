@@ -33,9 +33,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.shopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewShopBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewBookReviewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewBookOrderInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationBookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +52,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.shopBooksToolStripMenuItem,
-            this.bookOrdersToolStripMenuItem,
             this.bookAuthorsToolStripMenuItem,
             this.systemExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -67,8 +63,7 @@
             // shopBooksToolStripMenuItem
             // 
             this.shopBooksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewShopBooksToolStripMenuItem,
-            this.viewBookReviewsToolStripMenuItem});
+            this.viewShopBooksToolStripMenuItem});
             this.shopBooksToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shopBooksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("shopBooksToolStripMenuItem.Image")));
             this.shopBooksToolStripMenuItem.Name = "shopBooksToolStripMenuItem";
@@ -80,34 +75,9 @@
             this.viewShopBooksToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Underline);
             this.viewShopBooksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewShopBooksToolStripMenuItem.Image")));
             this.viewShopBooksToolStripMenuItem.Name = "viewShopBooksToolStripMenuItem";
-            this.viewShopBooksToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.viewShopBooksToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.viewShopBooksToolStripMenuItem.Text = "View Store Books Catalog";
-            // 
-            // viewBookReviewsToolStripMenuItem
-            // 
-            this.viewBookReviewsToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewBookReviewsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewBookReviewsToolStripMenuItem.Image")));
-            this.viewBookReviewsToolStripMenuItem.Name = "viewBookReviewsToolStripMenuItem";
-            this.viewBookReviewsToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-            this.viewBookReviewsToolStripMenuItem.Text = "View Reviews Store Books";
-            // 
-            // bookOrdersToolStripMenuItem
-            // 
-            this.bookOrdersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewBookOrderInformationToolStripMenuItem});
-            this.bookOrdersToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookOrdersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bookOrdersToolStripMenuItem.Image")));
-            this.bookOrdersToolStripMenuItem.Name = "bookOrdersToolStripMenuItem";
-            this.bookOrdersToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.bookOrdersToolStripMenuItem.Text = "Book Shopping System";
-            // 
-            // viewBookOrderInformationToolStripMenuItem
-            // 
-            this.viewBookOrderInformationToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Underline);
-            this.viewBookOrderInformationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewBookOrderInformationToolStripMenuItem.Image")));
-            this.viewBookOrderInformationToolStripMenuItem.Name = "viewBookOrderInformationToolStripMenuItem";
-            this.viewBookOrderInformationToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.viewBookOrderInformationToolStripMenuItem.Text = "Make Book Order";
+            this.viewShopBooksToolStripMenuItem.Click += new System.EventHandler(this.viewShopBooksToolStripMenuItem_Click);
             // 
             // bookAuthorsToolStripMenuItem
             // 
@@ -126,6 +96,7 @@
             this.viewInformationBookAuthorsToolStripMenuItem.Name = "viewInformationBookAuthorsToolStripMenuItem";
             this.viewInformationBookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(306, 22);
             this.viewInformationBookAuthorsToolStripMenuItem.Text = "View Information About Book Writers";
+            this.viewInformationBookAuthorsToolStripMenuItem.Click += new System.EventHandler(this.viewInformationBookAuthorsToolStripMenuItem_Click);
             // 
             // systemExitToolStripMenuItem
             // 
@@ -134,6 +105,7 @@
             this.systemExitToolStripMenuItem.Name = "systemExitToolStripMenuItem";
             this.systemExitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.systemExitToolStripMenuItem.Text = "SIGN OUT";
+            this.systemExitToolStripMenuItem.Click += new System.EventHandler(this.systemExitToolStripMenuItem_Click);
             // 
             // shopBookForm
             // 
@@ -142,6 +114,8 @@
             this.ClientSize = new System.Drawing.Size(942, 369);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "shopBookForm";
             this.Text = "Welcome to System - User Mode [BookManagmentSystemApplication] - Shop Books Catal" +
     "og";
@@ -159,9 +133,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem shopBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewShopBooksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewBookReviewsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewBookOrderInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookAuthorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInformationBookAuthorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem systemExitToolStripMenuItem;

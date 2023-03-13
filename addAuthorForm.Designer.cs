@@ -473,7 +473,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(704, 230);
             this.dataGridView1.TabIndex = 42;
             // 
-            // Form12
+            // addAuthorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -509,7 +509,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form12";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "addAuthorForm";
             this.Text = "Form12";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
