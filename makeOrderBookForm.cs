@@ -59,6 +59,7 @@ namespace BookManagementSystem
             string paymentMethod = comboBox1.SelectedItem.ToString();
             string mailServiceLocation = comboBox2.SelectedItem.ToString();
             InsertData(userId, userEmail, userFirstName, userSecondName, bookID, paymentMethod, mailServiceLocation);
+            MessageBox.Show("Thank you for Buying this Book!"); textBox1.Clear(); textBox2.Clear(); textBox3.Clear(); textBox4.Clear();
             LoadData();
         }
 
